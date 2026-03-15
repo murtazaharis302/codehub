@@ -321,24 +321,24 @@ export default function Footer() {
                 <div className="flex items-center gap-3 group">
                   <Phone className="w-4 h-4 text-gray-100 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12" />
                   <a
-                    href="tel:+91123456789"
+                    href="tel:+923185691360"
                     onMouseEnter={handleLinkEnter}
                     onMouseLeave={handleLinkLeave}
                     className="footer-link font-['Manrope'] text-gray-300 hover:text-white transition-colors duration-300 text-sm"
                   >
-                    +91 123 456789
+                    +92 318 5691360
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3 group">
                   <Mail className="w-4 h-4 text-gray-100 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12" />
                   <a
-                    href="mailto:hello@domain.com"
+                    href="mailto:murtazaharis302@gmail.com"
                     onMouseEnter={handleLinkEnter}
                     onMouseLeave={handleLinkLeave}
                     className="footer-link font-['Manrope'] text-gray-300 hover:text-white transition-colors duration-300 text-sm"
                   >
-                    test@test.com
+                    murtazaharis302@gmail.com
                   </a>
                 </div>
 
