@@ -2,6 +2,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import gsap from "gsap";
 
@@ -11,7 +12,7 @@ const Navbar = () => {
   const [mobileExpanded, setMobileExpanded] = useState({});
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  
+
   // Refs for GSAP animations
   const navbarRef = useRef(null);
   const navLinksRef = useRef([]);
@@ -22,7 +23,7 @@ const Navbar = () => {
   const mobileDropdownRefs = useRef({});
   const logoRef = useRef(null);
   const accentLineRef = useRef(null);
-  
+
   // Timeout ref for hover delay
   const hoverTimeoutRef = useRef(null);
 
@@ -33,23 +34,23 @@ const Navbar = () => {
   // Run animations after mounted
   useEffect(() => {
     if (!mounted) return;
-    
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
-      
+
       // Navbar slide down
-      tl.fromTo(navbarRef.current, 
+      tl.fromTo(navbarRef.current,
         { y: -100, opacity: 0 },
         { y: 0, opacity: 1, duration: 1.2, ease: "power4.out" }
       );
-      
+
       // Accent line animation
       tl.fromTo(accentLineRef.current,
         { scaleX: 0, transformOrigin: "left" },
         { scaleX: 1, duration: 1.5, ease: "power4.out" },
         "-=0.8"
       );
-      
+
       // Logo fade in
       if (logoRef.current) {
         tl.fromTo(logoRef.current,
@@ -58,22 +59,22 @@ const Navbar = () => {
           "-=0.6"
         );
       }
-      
+
       // Nav links fade in one by one
       const validNavLinks = navLinksRef.current.filter(el => el);
       if (validNavLinks.length > 0) {
         tl.fromTo(validNavLinks,
           { opacity: 0 },
-          { 
-            opacity: 1, 
-            duration: 0.6, 
-            stagger: 0.1, 
+          {
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.1,
             ease: "power2.out"
           },
           "-=0.4"
         );
       }
-      
+
       // CTA button fade in
       if (ctaButtonRef.current) {
         tl.fromTo(ctaButtonRef.current,
@@ -101,7 +102,7 @@ const Navbar = () => {
         });
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
@@ -113,7 +114,7 @@ const Navbar = () => {
         { y: -30, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.6, ease: "power4.out" }
       );
-      
+
       gsap.fromTo(
         mobileMenuRef.current.children,
         { x: -30, opacity: 0 },
@@ -126,12 +127,12 @@ const Navbar = () => {
   useEffect(() => {
     if (window.innerWidth >= 1024 && activeDropdown && dropdownRefs.current[activeDropdown]) {
       const dropdown = dropdownRefs.current[activeDropdown];
-      
+
       gsap.fromTo(dropdown,
         { y: -15, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }
       );
-      
+
       gsap.fromTo(
         dropdown.querySelectorAll('.dropdown-item'),
         { y: -8, opacity: 0 },
@@ -150,7 +151,7 @@ const Navbar = () => {
           const height = element.scrollHeight;
           element.style.height = '0px';
           element.offsetHeight;
-          
+
           gsap.to(element, {
             height: height,
             opacity: 1,
@@ -164,7 +165,7 @@ const Navbar = () => {
           const height = element.scrollHeight;
           element.style.height = height + 'px';
           element.offsetHeight;
-          
+
           gsap.to(element, {
             height: 0,
             opacity: 0,
@@ -354,24 +355,30 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className={`fixed w-full z-50 top-0 transition-shadow duration-700 ${
-        scrolled ? "shadow-lg border-b border-gray-100" : "border-b border-gray-100"
-      }`}
+      className={`fixed w-full z-50 top-0 transition-shadow duration-700 ${scrolled ? "shadow-lg border-b border-gray-100" : "border-b border-gray-100"
+        }`}
       style={{ backgroundColor: scrolled ? "rgba(255, 255, 255, 0.95)" : "rgba(255, 255, 255, 1)", backdropFilter: scrolled ? "blur(8px)" : "none" }}
     >
       {/* Premium accent line */}
-      <div 
+      <div
         ref={accentLineRef}
         className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900"
         style={{ transform: "scaleX(0)", transformOrigin: "left" }}
       ></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo with Marcellus font */}
           <div className="flex-shrink-0" ref={logoRef} style={{ opacity: 0 }}>
-            <Link href="/" className="font-marcellus text-2xl tracking-wide text-gray-900">
-              Riden<span className="text-gray-500 ml-1 text-lg font-light">Tech</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="RidenTech Logo"
+                width={150}
+                height={40}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </Link>
           </div>
 
@@ -401,12 +408,11 @@ const Navbar = () => {
                       onMouseEnter={() => handleNavItemEnter(item.title)}
                     >
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${
-                          activeDropdown === item.title ? "rotate-180" : ""
-                        }`}
+                        className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === item.title ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
-                    
+
                     {/* Hover underline effect */}
                     <span
                       ref={el => underlineRefs.current[`${item.title}-desktop`] = el}
@@ -576,13 +582,12 @@ const Navbar = () => {
                         className="p-2"
                       >
                         <ChevronDown
-                          className={`w-4 h-4 text-gray-500 transition-all duration-500 ${
-                            mobileExpanded[item.title] ? "rotate-180" : ""
-                          }`}
+                          className={`w-4 h-4 text-gray-500 transition-all duration-500 ${mobileExpanded[item.title] ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
                     </div>
-                    
+
                     {/* Collapsible dropdown items */}
                     <div
                       ref={el => mobileDropdownRefs.current[item.title] = el}
@@ -618,7 +623,7 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            
+
             {/* Mobile CTA Button */}
             <div className="pt-6 mt-3 border-t border-gray-100">
               <Link
