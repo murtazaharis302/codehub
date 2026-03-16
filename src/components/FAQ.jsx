@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqData = [
   {
-    question: "What services does Riden Tech offer?",
+    question: "What services does Codehub offer?",
     answer: "We offer a comprehensive range of software development services including Custom Software Development, Web & PWA Engineering, Mobile App Development, API Integration, AI & Machine Learning, Cloud Architecture, DevOps, UI/UX Design, E-Commerce Solutions, and Database Architecture."
   },
   {
