@@ -430,7 +430,7 @@ export default function Footer() {
         ref={bigLogoRef}
         className="w-full text-center mt-8 pb-4 pointer-events-none overflow-hidden"
       >
-        <h1 className="font-['Manrope'] text-[20vw] md:text-[25vw] lg:text-[23vw] font-black uppercase text-white/10 hover:text-white/20 leading-[0.8] tracking-tight select-none transition-all duration-500 hover:scale-105 inline-block">
+        <h1 className="font-['Manrope'] text-[15vw] md:text-[18vw] lg:text-[16vw] font-black uppercase text-white/10 hover:text-white/20 leading-[0.8] tracking-tight select-none transition-all duration-500 hover:scale-105 inline-block">
           CODEHUB
         </h1>
       </div>
