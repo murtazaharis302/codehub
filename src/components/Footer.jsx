@@ -356,7 +356,7 @@ export default function Footer() {
           <div className="border-t border-gray-800 pt-6 relative z-[60] pointer-events-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               <p className="font-['Manrope'] text-xs text-gray-400">
-                © {currentYear} RidenTech. All rights reserved.
+                © {currentYear} CodeHub. All rights reserved.
               </p>
 
               {/* Privacy Flex */}
@@ -431,7 +431,7 @@ export default function Footer() {
         className="w-full text-center mt-8 pb-4 pointer-events-none overflow-hidden"
       >
         <h1 className="font-['Manrope'] text-[20vw] md:text-[25vw] lg:text-[23vw] font-black uppercase text-white/10 hover:text-white/20 leading-[0.8] tracking-tight select-none transition-all duration-500 hover:scale-105 inline-block">
-          RIDEN
+          CODEHUB
         </h1>
       </div>
     </footer>
