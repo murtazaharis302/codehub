@@ -146,7 +146,7 @@ const Hero = () => {
             {/* Badge - responsive sizing */}
             <div ref={badgeRef} className="inline-flex items-center bg-gray-100 rounded-full px-3 md:px-4 lg:px-4 py-1.5 md:py-2 lg:py-2">
               <span className="w-1.5 h-1.5 md:w-2 md:h-2 lg:w-2 lg:h-2 bg-gray-900 rounded-full mr-1.5 md:mr-2 lg:mr-2"></span>
-              <span className="text-xs md:text-sm lg:text-sm font-manrope text-gray-700 tracking-wide">WELCOME TO RIDEN TECH</span>
+              <span className="text-xs md:text-sm lg:text-sm font-manrope text-gray-700 tracking-wide">WELCOME TO CODEHUB</span>
             </div>
 
             {/* Main Heading - responsive text sizes */}
