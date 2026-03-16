@@ -304,7 +304,7 @@ export default function Testimonials() {
           </h2>
           <h2 ref={subtitleRef} className="font-marcellus text-5xl md:text-6xl text-gray-900 mb-6">
             <span className="relative">
-              About Riden Tech
+              About CODEHUB
             </span>
           </h2>
 
