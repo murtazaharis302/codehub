@@ -211,7 +211,7 @@ export default function CEOMessage() {
                 is an opportunity to make someone&apos;s life better, easier, or more meaningful.&quot;
               </p>
               <p className="font-manrope text-gray-600 leading-relaxed">
-                When I founded Riden Tech over a decade ago, I envisioned a company where
+                When I founded Code Hub over a decade ago, I envisioned a company where
                 innovation meets empathy, where technical excellence serves human needs.
                 Today, I&apos;m proud to lead a team that shares this vision — brilliant minds
                 who understand that our real job is to transform challenges into opportunities

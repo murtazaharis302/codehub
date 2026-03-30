@@ -25,7 +25,7 @@ const AdminLogin = () => {
   const spinnerRef = useRef(null);
 
   // Default credentials in case env variables are not loaded
-  const DEFAULT_EMAIL = 'admin@riden.tech';
+  const DEFAULT_EMAIL = 'admin@codehub.tech';
   const DEFAULT_PASSWORD = 'admin123';
 
   // Get credentials from environment variables with fallback to defaults
@@ -297,7 +297,7 @@ const AdminLogin = () => {
 
         {/* Footer */}
         <p className="text-center text-xs text-gray-400 mt-6">
-          © {new Date().getFullYear()} RidenTech. All rights reserved.
+          © {new Date().getFullYear()} Code Hub. All rights reserved.
         </p>
       </div>
     </div>

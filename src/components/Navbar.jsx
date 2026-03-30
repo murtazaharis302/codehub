@@ -373,7 +373,7 @@ const Navbar = () => {
             <Link href="/" className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="RidenTech Logo"
+                alt="Code Hub Logo"
                 width={150}
                 height={40}
                 className="h-10 w-auto object-contain"

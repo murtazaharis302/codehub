@@ -321,12 +321,12 @@ export default function Footer() {
                 <div className="flex items-center gap-3 group">
                   <Phone className="w-4 h-4 text-gray-100 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12" />
                   <a
-                    href="tel:+923185691360"
+                    href="tel:+923295841610"
                     onMouseEnter={handleLinkEnter}
                     onMouseLeave={handleLinkLeave}
                     className="footer-link font-['Manrope'] text-gray-300 hover:text-white transition-colors duration-300 text-sm"
                   >
-                    +92 318 5691360
+                    +92 329 5841610
                   </a>
                 </div>
 
@@ -345,7 +345,7 @@ export default function Footer() {
                 <div className="flex items-start gap-3 group">
                   <MapPin className="w-4 h-4 text-gray-100 flex-shrink-0 mt-1 transition-transform duration-300 group-hover:rotate-12" />
                   <span className="font-['Manrope'] text-gray-300 text-sm">
-                    Springfield 1234 Elmwood Street, IL 62701 USA
+                    Wah Cantt, Islamabad
                   </span>
                 </div>
               </div>

@@ -50,7 +50,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quote: "Riden Tech transformed our outdated systems into a modern, efficient platform. Their team understood our vision and delivered beyond expectations.",
+      quote: "Code Hub transformed our outdated systems into a modern, efficient platform. Their team understood our vision and delivered beyond expectations.",
       author: "Sarah Johnson",
       role: "CEO, TechStart",
       rating: 5,
@@ -66,7 +66,7 @@ export default function Testimonials() {
     },
     {
       id: 3,
-      quote: "Working with Riden Tech was seamless. They didn't just code—they contributed ideas that made our product significantly better.",
+      quote: "Working with Code Hub was seamless. They didn't just code—they contributed ideas that made our product significantly better.",
       author: "Emma Williams",
       role: "Product Manager, InnovateCo",
       rating: 5,
@@ -98,7 +98,7 @@ export default function Testimonials() {
     },
     {
       id: 7,
-      quote: "From concept to launch, Riden Tech was with us every step. Their technical guidance saved us months of development time.",
+      quote: "From concept to launch, Code Hub was with us every step. Their technical guidance saved us months of development time.",
       author: "Jennifer Lee",
       role: "Startup Founder",
       rating: 5,

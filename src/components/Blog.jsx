@@ -58,7 +58,7 @@ export default function Blog() {
             month: date.toLocaleString('en-US', { month: 'short' }),
             year: String(date.getFullYear()).slice(-2),
             readTime: `${Math.max(2, Math.ceil((blog.content || '').length / 1000))} min read`,
-            author: "Riden Tech",
+            author: "Code Hub",
             authorImage: "https://randomuser.me/api/portraits/men/32.jpg",
           };
         });
