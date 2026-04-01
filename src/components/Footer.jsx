@@ -265,7 +265,7 @@ export default function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-32 mb-16">
             {/* Site Map */}
             <div ref={el => columnsRef.current[0] = el} className="space-y-4">
               <h3 className="font-['Manrope'] text-gray-200 text-xs tracking-wider">SITE MAP</h3>
@@ -285,46 +285,8 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Support */}
-            <div ref={el => columnsRef.current[1] = el} className="space-y-4">
-              <h3 className="font-['Manrope'] text-gray-200 text-xs tracking-wider">SUPPORT</h3>
-              <ul className="space-y-2">
-                {['Contact Us', 'About Us', 'Team Member', 'Login Now', 'Register Now'].map((item) => (
-                  <li key={item}>
-                    <Link
-                      href={`/${item.toLowerCase().replace(' ', '-')}`}
-                      onMouseEnter={handleLinkEnter}
-                      onMouseLeave={handleLinkLeave}
-                      className="footer-link font-['Manrope'] text-gray-400 hover:text-white transition-colors duration-300 text-sm inline-block"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Utilities */}
-            <div ref={el => columnsRef.current[2] = el} className="space-y-4">
-              <h3 className="font-['Manrope'] text-gray-200 text-xs tracking-wider">UTILITIES</h3>
-              <ul className="space-y-2">
-                {['Licensing', 'Style Guide', 'Changelog', 'Instructions', '404 Not Found'].map((item) => (
-                  <li key={item}>
-                    <Link
-                      href={`/${item.toLowerCase().replace(' ', '-')}`}
-                      onMouseEnter={handleLinkEnter}
-                      onMouseLeave={handleLinkLeave}
-                      className="footer-link font-['Manrope'] text-gray-400 hover:text-white transition-colors duration-300 text-sm inline-block"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* Contact Info */}
-            <div ref={el => columnsRef.current[3] = el} className="space-y-4">
+            <div ref={el => columnsRef.current[1] = el} className="space-y-4">
               <h3 className="font-['Manrope'] text-gray-200 text-xs tracking-wider">CONTACT US</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 group">
