@@ -47,7 +47,7 @@ export default function BlogPage() {
             year: String(date.getFullYear()).slice(-2),
             readTime: `${Math.max(2, Math.ceil((blog.content || '').length / 1000))} min read`,
             comments: 0,
-            author: "Riden Tech",
+            author: "Code Hub",
             authorImage: "https://randomuser.me/api/portraits/men/32.jpg",
             authorBio: "",
             authorRole: "Team",

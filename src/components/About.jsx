@@ -211,7 +211,7 @@ const About = () => {
             className="inline-flex items-center bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full px-5 py-2.5 mb-6 shadow-lg"
           >
             <Zap className="w-4 h-4 mr-2" />
-            <span className="text-sm font-manrope font-medium tracking-wide">ABOUT RIDEN TECH</span>
+            <span className="text-sm font-manrope font-medium tracking-wide">ABOUT CODE HUB</span>
           </div>
 
           {/* Titles with animation */}
@@ -257,7 +257,7 @@ const About = () => {
             {/* Description Text */}
             <div ref={descriptionRef} className="space-y-4">
               <p className="font-instrument text-lg text-gray-600 leading-relaxed">
-                With over years of experience, Riden Tech is a passionate, driven, and attentive team
+                With over years of experience, Code Hub is a passionate, driven, and attentive team
                 offering creative talent and technical expertise. We specialize in transforming complex
                 challenges into seamless digital solutions that resonate with users and drive business growth.
               </p>

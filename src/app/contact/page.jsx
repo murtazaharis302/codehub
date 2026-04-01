@@ -292,23 +292,23 @@ export default function ContactPage() {
               ref={el => cardRefs.current[0] = el}
               icon={<FiMail />}
               title="Email"
-              text="hello@riden.tech"
-              link="mailto:hello@riden.tech"
+              text="murtazaharis302@gmail.com"
+              link="mailto:murtazaharis302@gmail.com"
             />
 
             <ContactCard
               ref={el => cardRefs.current[1] = el}
               icon={<FiPhone />}
               title="Call"
-              text="+1 (555) 123-4567"
-              link="tel:+15551234567"
+              text="+92 329 5841610"
+              link="tel:+923295841610"
             />
 
             <ContactCard
               ref={el => cardRefs.current[2] = el}
               icon={<FiMapPin />}
               title="Visit"
-              text="San Francisco, CA"
+              text="Wah Cantt, Islamabad"
             />
           </div>
 
@@ -343,7 +343,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Logo & Description */}
             <div>
-              <h3 className="font-['Marcellus'] text-2xl mb-4">Riden<span className="text-gray-400">Tech</span></h3>
+              <h3 className="font-['Marcellus'] text-2xl mb-4">Code<span className="text-gray-400">Hub</span></h3>
               <p className="font-['Manrope'] text-sm text-gray-400">
                 Building innovative digital solutions for forward-thinking businesses.
               </p>
@@ -365,13 +365,13 @@ export default function ContactPage() {
               <h4 className="font-['Marcellus'] text-lg mb-4">Contact</h4>
               <ul className="space-y-2">
                 <li className="font-['Manrope'] text-sm text-gray-400 flex items-center gap-2">
-                  <FiMail className="w-4 h-4" /> hello@riden.tech
+                  <FiMail className="w-4 h-4" /> murtazaharis302@gmail.com
                 </li>
                 <li className="font-['Manrope'] text-sm text-gray-400 flex items-center gap-2">
-                  <FiPhone className="w-4 h-4" /> +1 (555) 123-4567
+                  <FiPhone className="w-4 h-4" /> +92 329 5841610
                 </li>
                 <li className="font-['Manrope'] text-sm text-gray-400 flex items-center gap-2">
-                  <FiMapPin className="w-4 h-4" /> San Francisco, CA
+                  <FiMapPin className="w-4 h-4" /> Wah Cantt, Islamabad
                 </li>
               </ul>
             </div>
@@ -379,7 +379,7 @@ export default function ContactPage() {
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="font-['Manrope'] text-xs text-gray-500">
-              © {new Date().getFullYear()} RidenTech. All rights reserved.
+              © {new Date().getFullYear()} Code Hub. All rights reserved.
             </p>
           </div>
         </div>

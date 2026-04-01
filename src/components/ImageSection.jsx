@@ -148,7 +148,7 @@ const ImageSection = () => {
           >
             <Zap className="w-4 h-4 mr-2 text-gray-100" />
             <span className="text-sm font-manrope font-medium tracking-wide">
-              ABOUT CODEHUB
+              ABOUT CODE HUB
             </span>
           </div>
 
