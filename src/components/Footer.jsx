@@ -28,6 +28,15 @@ export default function Footer() {
   const [newsletterStatus, setNewsletterStatus] = useState({ message: '', success: false });
   const [subscribing, setSubscribing] = useState(false);
 
+  const links = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Services', href: '/services' },
+    { name: 'Blogs', href: '/blogs' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -261,10 +270,10 @@ export default function Footer() {
             <div ref={el => columnsRef.current[0] = el} className="space-y-4">
               <h3 className="font-['Manrope'] text-gray-200 text-xs tracking-wider">SITE MAP</h3>
               <ul className="space-y-2">
-                {['Home', 'Services', 'Pricing', 'Blogs', 'Projects'].map((item) => (
-                  <li key={item}>
+                {links.map((link) => (
+                  <li key={link.name}>
                     <Link
-                      href={`/${item.toLowerCase()}`}
+                      href={link.href}
                       onMouseEnter={handleLinkEnter}
                       onMouseLeave={handleLinkLeave}
                       className="footer-link font-['Manrope'] text-gray-400 hover:text-white transition-colors duration-300 text-sm inline-block"
