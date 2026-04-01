@@ -278,7 +278,7 @@ export default function Footer() {
                       onMouseLeave={handleLinkLeave}
                       className="footer-link font-['Manrope'] text-gray-400 hover:text-white transition-colors duration-300 text-sm inline-block"
                     >
-                      {item}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
